@@ -435,6 +435,40 @@ h2 {
   background: var(--bg);
 }
 
+.faq {
+  background: #ffffff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.faq-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 18px 20px;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(75, 107, 255, 0.25);
+}
+
+.faq-card h3 {
+  margin: 6px 0 8px;
+  font-size: 18px;
+}
+
+.faq-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
