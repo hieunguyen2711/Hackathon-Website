@@ -1,6 +1,8 @@
+import Landing from "./page/landing.jsx";
 import Home from "./page/home.jsx";
+
 import AnimatedContent from "./components/AnimatedContent.jsx";
-import "./App.css";
+import Navbar from "./components/navbar.jsx";
 import { useState, useEffect } from 'react';
 
 export default function App() {
@@ -10,7 +12,8 @@ export default function App() {
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setScrolled(true);
-      }
+      } 
+      
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -18,22 +21,19 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <div className={`index-page ${scrolled ? 'scrolled' : ''}`}>
         <div className="container">
           <AnimatedContent>
-            <Home />
+            <Landing />
           </AnimatedContent>
         </div>
       </div>
 
       <div className={`main-content ${scrolled ? 'visible' : ''}`}>
-        {/* Your regular page content goes here */}
-        <section >
-          <h2>Welcome to the main content</h2>
-          <p>Scroll to see more...</p>
-        </section>
+        <Navbar />
+        <Home />
       </div>
-    </>
+    </div>
   );
 }

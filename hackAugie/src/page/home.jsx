@@ -1,10 +1,22 @@
-
-
+import ScrollStack, { ScrollStackItem } from "../components/ScrollStack.jsx";
 export default function Home() {
   return (
-    <div className="">
-        {/* Grid with a timer and a viking image on the side  and maybe some glowy bg but make it water color */}
-        <div>Have an idea I plan to develop?</div>
+    <div className="home">
+      <h1>Welcome to HackAugie 2026!</h1>
+      {/* <ScrollStack>
+        <ScrollStackItem>
+          <h2>Card 1</h2>
+          <p>This is the first card in the stack</p>
+        </ScrollStackItem>
+        <ScrollStackItem>
+          <h2>Card 2</h2>
+          <p>This is the second card in the stack</p>
+        </ScrollStackItem>
+        <ScrollStackItem>
+          <h2>Card 3</h2>
+          <p>This is the third card in the stack</p>
+        </ScrollStackItem>
+      </ScrollStack> */}
     </div>
   );
 }
