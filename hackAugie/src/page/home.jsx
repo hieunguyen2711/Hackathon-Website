@@ -1,33 +1,78 @@
 import AnimatedContent from "../components/AnimatedContent";
-import ScrollStack, {ScrollStackItem} from "../components/ScrollStack";
+import ScrollStack, { ScrollStackItem } from "../components/ScrollStack";
 export default function Home() {
   return (
     <div className="home">
       <div className="home-hero">
-  <AnimatedContent delay={0}>
-    <h1>Welcome to HackAugie 2026!</h1>
-  </AnimatedContent>
-  <AnimatedContent delay={0.2} distance={50}>
-    <p>Where innovation meets creativity in a 48-hour coding adventure</p>
-  </AnimatedContent>
-</div>
-      <div align="center">
-       <ScrollStack >
-        <ScrollStackItem>
-          <h2>Card 1</h2>
-          <p>This is the first card in the stack</p>
-        </ScrollStackItem>
-        <ScrollStackItem>
-          <h2>Card 2</h2>
-          <p>This is the second card in the stack</p>
-        </ScrollStackItem>
-        <ScrollStackItem>
-          <h2>Card 3</h2>
-          <p>This is the third card in the stack</p>
-        </ScrollStackItem>
-      </ScrollStack>
+        <AnimatedContent delay={0}>
+          <h1>Welcome to HackAugie 2026!</h1>
+        </AnimatedContent>
+        <AnimatedContent delay={0.2} distance={50}>
+          <p>Where innovation meets creativity in a 48-hour coding adventure</p>
+        </AnimatedContent>
       </div>
-       
+      <div align="center">
+        <ScrollStack>
+          <ScrollStackItem>
+            <h2>What is HackAugie?</h2>
+            <p>
+              HackAugie is Augustana College’s first large-scale 24-hour
+              hackathon - a weekend of creativity, teamwork, and building real
+              projects. Our goal is to bring together students from local
+              Midwest universities and experts from local tech companies to
+              collaborate, build, and connect.
+            </p>
+          </ScrollStackItem>
+          <ScrollStackItem>
+            <h2>Who can join</h2>
+            <p>
+              At a hackathon, a teams of 2–4 students work together to solve a
+              problem. You do not need to know how to code. Typical team roles:
+            </p>
+            <div className="no-list">
+              <p>
+                <ul>
+                  <li>
+                    <strong>Designers → UI/UX, visuals, branding</strong>
+                  </li>
+                  <li>
+                    <strong>Developers → build the app/website/game</strong>
+                  </li>
+                  <li>
+                    <strong>Business → data, marketing, storytelling</strong>
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+            <h2>How it works</h2>
+            <p>
+              There will be tracks depend on sponsors and companies, they will
+              give us a problem and we will build a solution for it! For
+              example:
+            </p>
+            <div className="no-list">
+              <p>
+                <ul>
+                  <li>
+                    <strong>Healthcare: medication reminder app, a website to make healthcare more accessible for people in disadvantaged areas…</strong>
+                  </li>
+                  <li>
+                    <strong>FinTech: student budgeting dashboard, crypto app, block chain…</strong>
+                  </li>
+                  <li>
+                    <strong>Gaming: VR game, puzzle game…</strong>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <p>Excited to see what you build!</p>
+          </ScrollStackItem>
+        </ScrollStack>
+      </div>
+
+      
     </div>
   );
 }

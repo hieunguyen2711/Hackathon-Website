@@ -77,7 +77,14 @@ img {
   align-items: center;
   min-height: 120vh;
 }
-
+ul {
+  padding-left: 20px;
+  margin: 16px 0;
+}
+ul li {
+  margin-bottom: 8px;
+  list-style: none;
+}
 .nav-bar {
   display: flex;
   align-items: center;
@@ -103,6 +110,12 @@ img {
   transform: translateY(-1px);
 }
 
+
+
+.home h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
 
 /* Home Hero Section */
