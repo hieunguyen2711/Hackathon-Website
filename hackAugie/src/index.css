@@ -11,7 +11,9 @@
   --radius: 16px;
   --gradient: linear-gradient(135deg, #4b6bff 0%, #6ee7d5 45%, #ffb74b 100%);
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 @font-face {
   font-family: 'Norse';
   src: url('./components/norse-font/Norse-KaWl.otf') format('opentype');
@@ -73,6 +75,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 120vh;
 }
 
 .nav-bar {
@@ -100,29 +103,26 @@ img {
   transform: translateY(-1px);
 }
 
-/* Index Page Styles For the landign animations*/
-.index-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+
+
+/* Home Hero Section */
+.home-hero {
+  min-height: 20vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background: inherit;
-  z-index: 1000;
-  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
 }
 
-.index-page.scrolled {
-  transform: translateX(-100%);
+.home-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
 }
 
-.main-content {
-  padding-top: 100vh; /* Push content down initially */
-}
-.main-content.visible {
-  padding-top: 0;
-  transition: padding-top 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+.home-hero p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--muted);
+  max-width: 600px;
 }

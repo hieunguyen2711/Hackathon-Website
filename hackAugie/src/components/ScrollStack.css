@@ -1,45 +1,62 @@
+/* ScrollStack container */
 .scroll-stack-scroller {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: visible;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+  height: 30vh;            /* fixed viewport for container scroll */
+  overflow-y: auto;          /* enable scrolling inside the container */
+  overscroll-behavior: contain; /* prevent scroll chaining to window */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: scroll-position;
 }
 
+/* Inner content wrapper */
 .scroll-stack-inner {
-  padding: 20vh 5rem 50rem;
-  /*min-height: 100vh;*/
+  position: relative;
+  min-height: 20vh; /* enough scrollable space */
+  padding: 2vh 5rem 2vh; /* top + bottom */
 }
+
 
 .scroll-stack-card-wrapper {
   position: relative;
 }
 
+/* Card styling */
 .scroll-stack-card {
+  position: relative;
   transform-origin: top center;
   will-change: transform, filter;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   height: 20rem;
-  width: 100%;
+  max-width: 900px;
   margin: 30px 0;
   padding: 3rem;
   border-radius: 40px;
   box-sizing: border-box;
-  /* Improve mobile performance */
+
+ background: white;
+  /* Improve mobile GPU performance */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  position: relative;
+}
+.scroll-stack-card {
+  transition: box-shadow 0.3s ease, transform 0.1s ease;
+  cursor: pointer;
 }
 
+
+.scroll-stack-card:hover {
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px) !important;
+}
+/* Marker for end of stack (for pin calculations) */
 .scroll-stack-end {
   width: 100%;
   height: 1px;
 }
+
+
