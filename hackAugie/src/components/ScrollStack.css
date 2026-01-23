@@ -50,15 +50,15 @@
   transform: translateZ(0);
 }
 .scroll-stack-card {
-  transition: box-shadow 0.3s ease, transform 0.1s ease;
+  transition: box-shadow 0.3s ease, transform 0.7s ease;
   cursor: pointer;
 }
 
 
-/* .scroll-stack-card:hover {
+.scroll-stack-card:hover {
   box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px) !important;
-} */
+  transform: translateY(-0.5px) !important
+}
 /* Marker for end of stack (for pin calculations) */
 .scroll-stack-end {
   width: 100%;

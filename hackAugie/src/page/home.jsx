@@ -1,5 +1,6 @@
 import AnimatedContent from "../components/AnimatedContent";
 import ScrollStack, { ScrollStackItem } from "../components/ScrollStack";
+import Tracks from "../components/tracks";
 export default function Home() {
   return (
     <div className="home">
@@ -23,7 +24,7 @@ export default function Home() {
               collaborate, build, and connect.
             </p>
           </ScrollStackItem>
-          <ScrollStackItem>
+          <ScrollStackItem color="--halftone-blue">
             <h2>Who can join</h2>
             <p>
               At a hackathon, a teams of 2–4 students work together to solve a
@@ -45,7 +46,7 @@ export default function Home() {
               </p>
             </div>
           </ScrollStackItem>
-          <ScrollStackItem>
+          <ScrollStackItem color="--halftone-green">
             <h2>How it works</h2>
             <p>
               There will be tracks depend on sponsors and companies, they will
@@ -69,10 +70,33 @@ export default function Home() {
             </div>
             <p>Excited to see what you build!</p>
           </ScrollStackItem>
+          <ScrollStackItem color="--halftone-yellow">
+            <h2>Why Join?</h2>
+            <div className="no-list">
+              <p>
+                HackAugie helps you:
+                <ul>
+                  <li>
+                    <strong>Build a real portfolio project</strong>
+                  </li>
+                  <li>
+                    <strong>Learn new tech fast</strong>
+                  </li>
+                  <li>
+                    <strong>Collaborate with cross-disciplinary teammates</strong>
+                  </li>
+                  <li><strong>Pitch like a startup</strong></li>
+                  <li><strong>Meet industry mentors & sponsors</strong></li>
+                </ul>
+              </p>
+            </div>
+          </ScrollStackItem>
         </ScrollStack>
       </div>
-
-      
+      {/* Tracks */}
+      <div>
+        <Tracks />
+      </div>
     </div>
   );
 }
