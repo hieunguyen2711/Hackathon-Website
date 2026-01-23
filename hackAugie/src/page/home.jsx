@@ -46,50 +46,11 @@ export default function Home() {
               </p>
             </div>
           </ScrollStackItem>
-          <ScrollStackItem color="--halftone-green">
-            <h2>How it works</h2>
-            <p>
-              There will be tracks depend on sponsors and companies, they will
-              give us a problem and we will build a solution for it! For
-              example:
-            </p>
-            <div className="no-list">
-              <p>
-                <ul>
-                  <li>
-                    <strong>Healthcare: medication reminder app, a website to make healthcare more accessible for people in disadvantaged areas…</strong>
-                  </li>
-                  <li>
-                    <strong>FinTech: student budgeting dashboard, crypto app, block chain…</strong>
-                  </li>
-                  <li>
-                    <strong>Gaming: VR game, puzzle game…</strong>
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <p>Excited to see what you build!</p>
-          </ScrollStackItem>
           <ScrollStackItem color="--halftone-yellow">
-            <h2>Why Join?</h2>
-            <div className="no-list">
-              <p>
-                HackAugie helps you:
-                <ul>
-                  <li>
-                    <strong>Build a real portfolio project</strong>
-                  </li>
-                  <li>
-                    <strong>Learn new tech fast</strong>
-                  </li>
-                  <li>
-                    <strong>Collaborate with cross-disciplinary teammates</strong>
-                  </li>
-                  <li><strong>Pitch like a startup</strong></li>
-                  <li><strong>Meet industry mentors & sponsors</strong></li>
-                </ul>
-              </p>
-            </div>
+            <h2>When and Where</h2>
+            <p>
+              HackAugie will take place on 18 April 2026 at Hanson Hall of Science, Augustana College. Comunications will be done via Discord.
+            </p>
           </ScrollStackItem>
         </ScrollStack>
       </div>
