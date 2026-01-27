@@ -85,7 +85,7 @@
 }
 @font-face {
   font-family: 'Norse';
-  src: url('./components/norse-font/Norse-KaWl.otf') format('opentype');
+  src: url('./components/norse-font/NorseBold-2Kge.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -100,17 +100,18 @@ html {
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Norse', system-ui, -apple-system, sans-serif !important;
+  font-size: 1.56rem;
 }
 
 body {
   margin: 0;
   font-family: 'Norse', system-ui, -apple-system, sans-serif;
-  background: 
+  /* background: 
     radial-gradient(circle at 20% 20%, rgba(75, 107, 255, 0.18), transparent 35%),
     radial-gradient(circle at 80% 0%, rgba(255, 183, 75, 0.22), transparent 32%),
     radial-gradient(circle at 50% 60%, rgba(110, 231, 213, 0.16), transparent 40%);
   background-size: 200% 200%;
-  animation: waterFlow 15s ease-in-out infinite;
+  animation: waterFlow 15s ease-in-out infinite; */
   color: var(--text);
   line-height: 1.6;
 }
@@ -159,6 +160,7 @@ ul li {
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
+  font-size: 1.8rem;
 }
 
 .nav-links {
@@ -166,6 +168,7 @@ ul li {
   gap: 12px;
   align-items: center;
   font-weight: 600;
+  
 }
 
 .nav-links a {

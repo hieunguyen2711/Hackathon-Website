@@ -4,7 +4,7 @@ import Landing from "./page/landing.jsx";
 import Home from "./page/home.jsx";
 import Navbar from "./components/navbar.jsx";
 import FAQs from "./components/faqs.jsx";
-
+import BackGround from "./components/Background.jsx";
 export default function App() {
   const [entered, setEntered] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
@@ -59,21 +59,21 @@ export default function App() {
           <Landing />
         </div>
       )}
+      <BackGround>
+        {entered && (
+          <div
+            className="home-wrapper"
+            style={{
+              animation: "fadeInHome 0.6s ease-out",
+            }}
+          >
+            <Navbar />
+            <Home />
+            <FAQs />
+          </div>
+        )}
 
-      {entered && (
-        <div
-          className="home-wrapper"
-          style={{
-            animation: "fadeInHome 0.6s ease-out",
-          }}
-        >
-          <Navbar />
-          <Home />
-          <FAQs />
-        </div>
-      )}
-
-      <style>{`
+        <style>{`
         @keyframes fadeInHome {
           from {
             opacity: 0;
@@ -93,6 +93,7 @@ export default function App() {
           will-change: opacity, transform;
         }
       `}</style>
+      </BackGround>
     </div>
   );
 }
