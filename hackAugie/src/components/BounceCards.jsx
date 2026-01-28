@@ -138,9 +138,12 @@ export default function BounceCards({
           style={{
             transform: transformStyles[idx] ?? "none",
           }}
+        
+        
           onMouseEnter={() => pushSiblings(idx)}
           onMouseLeave={resetSiblings}
         >
+            {console.log(card.color)  }
           <img
             className="image"
             src={card.image}

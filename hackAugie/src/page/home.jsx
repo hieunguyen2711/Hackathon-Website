@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div align="center">
         <ScrollStack>
-          <ScrollStackItem>
+          <ScrollStackItem color="--tangerine">
             <h2>What is HackAugie?</h2>
             <p>
               HackAugie is Augustana College’s first large-scale 24-hour
@@ -24,7 +24,7 @@ export default function Home() {
               collaborate, build, and connect.
             </p>
           </ScrollStackItem>
-          <ScrollStackItem color="--halftone-blue">
+          <ScrollStackItem color="--viridian">
             <h2>Who can join</h2>
             <p>
               At a hackathon, a teams of 2–4 students work together to solve a
@@ -46,7 +46,7 @@ export default function Home() {
               </p>
             </div>
           </ScrollStackItem>
-          <ScrollStackItem color="--halftone-yellow">
+          <ScrollStackItem color="--night-forest">
             <h2>When and Where</h2>
             <p>
               HackAugie will take place on 18 April 2026 at Hanson Hall of Science, Augustana College. Comunications will be done via Discord.

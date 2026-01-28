@@ -5,22 +5,25 @@ export default function Tracks() {
   {
     image: 'https://picsum.photos/400/400?grayscale',
     title: 'Best Overall Hack',
-    description: 'Full event access with exclusive perks'
+    description: 'Full event access with exclusive perks',
   },
   {
     image: 'https://picsum.photos/500/500?grayscale',
     title: 'Most creative solution',
-    description: 'Standard entry to all main areas'
+    description: 'Standard entry to all main areas',
+
+
   },
   {
     image: 'https://picsum.photos/600/600?grayscale',
     title: 'Best Use of AI',
-    description: 'Special discount for early registration'
+    description: 'Special discount for early registration',
+
   },
   {
     image: 'https://picsum.photos/600/600?grayscale',
     title: 'Vibe Code Track',
-    description: 'Special discount for early registration'
+    description: 'Special discount for early registration',
   },
   {
     image: 'https://picsum.photos/600/600?grayscale',
