@@ -35,9 +35,8 @@ export default function Tracks() {
 
 
   return (
-    <div align="center">
+    <div align="center" className="tracks">
       <h1>Tracks</h1>
-      
       <BounceCards cards={ticketCards} />
     </div>
   );

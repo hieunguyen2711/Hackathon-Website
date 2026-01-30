@@ -4,7 +4,9 @@ import Landing from "./page/landing.jsx";
 import Home from "./page/home.jsx";
 import Navbar from "./components/navbar.jsx";
 import FAQs from "./components/faqs.jsx";
+import Tracks from "./components/tracks.jsx";
 import BackGround from "./components/Background.jsx";
+import Sponsor from "./components/sposor.jsx";
 export default function App() {
   const [entered, setEntered] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
@@ -69,7 +71,9 @@ export default function App() {
           >
             <Navbar />
             <Home />
+            <Tracks />
             <FAQs />
+            <Sponsor />
           </div>
         )}
 

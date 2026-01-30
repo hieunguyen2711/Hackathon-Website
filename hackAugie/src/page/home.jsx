@@ -31,7 +31,7 @@ export default function Home() {
               problem. You do not need to know how to code. Typical team roles:
             </p>
             <div className="no-list">
-              <p>
+              <div>
                 <ul>
                   <li>
                     <strong>Designers → UI/UX, visuals, branding</strong>
@@ -43,7 +43,7 @@ export default function Home() {
                     <strong>Business → data, marketing, storytelling</strong>
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </ScrollStackItem>
           <ScrollStackItem color="--night-forest">
@@ -55,9 +55,6 @@ export default function Home() {
         </ScrollStack>
       </div>
       {/* Tracks */}
-      <div>
-        <Tracks />
-      </div>
     </div>
   );
 }
