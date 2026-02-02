@@ -2,7 +2,7 @@
 
 .carousel-container {
   width: 100%;
-  height: auto;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@
 
 .carousel-window {
   width: 100%;
-  height: 200px;
+  height: 600px;
   position: relative;
   perspective: 1200px;
   perspective-origin: center center;
@@ -28,14 +28,13 @@
   top: 50%;
   transform-origin: center center;
   will-change: transform;
-  padding: 0 50px;
   object-fit: contain;
 }
 
 .carousel-slide {
   flex-shrink: 0;
   width: 400px;
-  height: 560px;
+  height: 400px;
   position: relative;
   transform-style: preserve-3d;
   transform: 
@@ -46,10 +45,6 @@
   transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
-    -20px 40px 80px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.08),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .carousel-slide::before {
@@ -136,7 +131,7 @@
 @media (max-width: 1200px) {
   .carousel-slide {
     width: 360px;
-    height: 480px;
+    height: 320px;
   }
   
   .carousel-window {
@@ -147,7 +142,7 @@
 @media (max-width: 768px) {
   .carousel-slide {
     width: 280px;
-    height: 400px;
+    height: 320px;
   }
   
   .carousel-window {
@@ -172,4 +167,26 @@
   .carousel-track {
     gap: 20px;
   }
+}
+.carousel-slide {
+  position: relative;
+}
+
+.slide-label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-slide:hover .slide-label {
+  opacity: 1;
 }

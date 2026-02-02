@@ -6,7 +6,8 @@ import Navbar from "./components/navbar.jsx";
 import FAQs from "./components/faqs.jsx";
 import Tracks from "./components/tracks.jsx";
 import BackGround from "./components/Background.jsx";
-import Sponsor from "./components/sposor.jsx";
+import Sponsor from "./components/sponsor.jsx";
+ import InfiniteMenu from "./components/InfiniteMenu";
 export default function App() {
   const [entered, setEntered] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
@@ -46,6 +47,34 @@ export default function App() {
       document.body.style.overflow = "";
     };
   }, [entered]);
+ 
+
+  const items = [
+    {
+      image: "https://picsum.photos/300/300?grayscale",
+      link: "https://google.com/",
+      title: "Item 1",
+      description: "This is pretty cool, right?",
+    },
+    {
+      image: "https://picsum.photos/400/400?grayscale",
+      link: "https://google.com/",
+      title: "Item 2",
+      description: "This is pretty cool, right?",
+    },
+    {
+      image: "https://picsum.photos/500/500?grayscale",
+      link: "https://google.com/",
+      title: "Item 3",
+      description: "This is pretty cool, right?",
+    },
+    {
+      image: "https://picsum.photos/600/600?grayscale",
+      link: "https://google.com/",
+      title: "Item 4",
+      description: "This is pretty cool, right?",
+    },
+  ];
 
   return (
     <div className="app-root">
@@ -74,6 +103,10 @@ export default function App() {
             <Tracks />
             <FAQs />
             <Sponsor />
+            <div className="team-section" >
+              <h2>Our Team</h2>
+              <InfiniteMenu items={items} scale={1} />
+            </div>
           </div>
         )}
 

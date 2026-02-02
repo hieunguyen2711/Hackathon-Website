@@ -54,7 +54,7 @@ export default function Sponsor() {
       </div>
       <div style={{ marginTop: "4rem" }}></div>
         <CircularCarousel
-          images={sponsors.map((s) => s.logo)}
+          images={sponsors}
         />
       </div>
 
