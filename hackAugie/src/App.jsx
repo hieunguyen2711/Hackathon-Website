@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import Landing from "./page/landing.jsx";
-import Home from "./page/home.jsx";
+import Landing from "./components/LandingBg.jsx";
+import Home from "./home.jsx";
 import Navbar from "./components/navbar.jsx";
 import FAQs from "./components/faqs.jsx";
 import Tracks from "./components/tracks.jsx";
@@ -101,35 +101,36 @@ export default function App() {
             <Navbar />
             <Home />
             <Tracks />
-            <FAQs />
+            <FAQs  />
             <Sponsor />
-            <div className="team-section" >
+            <section className="team-section" id="team">
               <h2>Our Team</h2>
               <InfiniteMenu items={items} scale={1} />
-            </div>
+            </section>
           </div>
         )}
 
         <style>{`
-        @keyframes fadeInHome {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
+          @keyframes fadeInHome {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
+
+          .landing-wrapper.fade-out {
+            pointer-events: none;
           }
-        }
 
-        .landing-wrapper.fade-out {
-          pointer-events: none;
-        }
-
-        .home-wrapper {
-          will-change: opacity, transform;
-        }
-      `}</style>
+          .home-wrapper {
+            will-change: opacity, transform;
+          }
+          `}
+        </style>
       </BackGround>
     </div>
   );

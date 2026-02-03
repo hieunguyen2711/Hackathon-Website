@@ -109,9 +109,16 @@
   transition: 0.1s ease;
 }
 
-@media (max-width: 1500px) {
-  .face-title,
+@media (max-width: 1100px) {
+
   .face-description {
-    display: none;
+   top:80%;
+   max-width: 14ch;
+    font-size: 1rem;
+  }
+  
+  .face-title{
+    top:10%
   }
 }
+

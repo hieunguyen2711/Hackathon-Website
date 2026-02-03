@@ -3,7 +3,7 @@ import oldMain from "/src/assets/imgs/building.png";
 import { InstagramIcon } from "../assets/instagram";
 export default function FAQs() {
   return (
-    <section className="faq-section">
+    <section className="faq-section" id="faq">
       <h1 align="center">FAQs</h1>
       <div className="faq-grid">
         <div className="faq-accordion">

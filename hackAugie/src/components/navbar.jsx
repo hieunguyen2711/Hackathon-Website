@@ -6,10 +6,8 @@ export default function Navbar() {
       </div>
       <nav className="nav-links" aria-label="Primary">
         <a href="#sponsors">Sponsors</a>
-        <a href="#faq">FAQ</a>
+        <a href="#faq" scroll="smooth">FAQ</a>
         <a href="#team">Team</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a className="btn ghost" href="#register">
           Register
         </a>

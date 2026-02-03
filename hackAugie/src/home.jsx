@@ -1,6 +1,6 @@
-import AnimatedContent from "../components/AnimatedContent";
-import ScrollStack, { ScrollStackItem } from "../components/ScrollStack";
-import Tracks from "../components/tracks";
+import AnimatedContent from "./components/AnimatedContent";
+import ScrollStack, { ScrollStackItem } from "./components/ScrollStack";
+import Tracks from "./components/tracks";
 export default function Home() {
   return (
     <div className="home">

@@ -28,35 +28,39 @@ export default function Sponsor() {
   }, [sponsors.length]);
 
   return (
-    <div align="center">
-      <div className="sponsor-section" style={{ textAlign: "center" }}>
-        <h2>Our Sponsors</h2>
+    <section id="sponsors">
+      <div align="center">
+        <div className="sponsor-section" style={{ textAlign: "center" }}>
+          <h2>Our Sponsors</h2>
 
-        <div className="sponsor-section-grid">
-          <div className="sponsor-logo">
-            <div
-              className="image-track"
-              style={{ transform: `translateX(-${index * 400}px)` }}
-            >
-              {sponsors.map((s) => (
-                <div key={s.name} className="sponsor-item">
-                  <a key={s.name} href={s.url} target="_blank" rel="noreferrer">
-                    <img src={s.logo} alt={s.name} />
-                  </a>
-                </div>
-              ))}
+          <div className="sponsor-section-grid">
+            <div className="sponsor-logo">
+              <div
+                className="image-track"
+                style={{ transform: `translateX(-${index * 400}px)` }}
+              >
+                {sponsors.map((s) => (
+                  <div key={s.name} className="sponsor-item">
+                    <a
+                      key={s.name}
+                      href={s.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img src={s.logo} alt={s.name} />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p style={{ marginTop: "1rem" }}>{sponsors[index].desc}</p>
             </div>
           </div>
-          <div>
-            <p style={{ marginTop: "1rem" }}>{sponsors[index].desc}</p>
-          </div>
         </div>
+        <div style={{ marginTop: "4rem" }}></div>
+        <CircularCarousel images={sponsors} />
       </div>
-      <div style={{ marginTop: "4rem" }}></div>
-        <CircularCarousel
-          images={sponsors}
-        />
-      </div>
-
+    </section>
   );
 }

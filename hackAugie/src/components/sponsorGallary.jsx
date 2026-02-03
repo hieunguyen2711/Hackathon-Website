@@ -6,16 +6,7 @@ const SLIDE_GAP = 40;
 const SPEED = 0.6; // px per frame
 
 export default function CircularCarousel({ images }) {
-  const baseImages = images ?? [
-    {
-      name: "Mountain Dawn",
-      logo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1000&fit=crop",
-    },
-    {
-      name: "Forest Path",
-      logo: "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=1000&fit=crop",
-    },
-  ];
+  const baseImages = images 
 
   const trackRef = useRef(null);
   const offsetRef = useRef(0);
