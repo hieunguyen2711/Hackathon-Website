@@ -54,7 +54,7 @@ export default function Sponsor() {
               </div>
             </div>
             <div>
-              <p style={{ marginTop: "1rem" }}>{sponsors[index].desc}</p>
+              <p style={{ marginTop: "1rem", padding: "0 1rem" }}>{sponsors[index].desc}</p>
             </div>
           </div>
         </div>

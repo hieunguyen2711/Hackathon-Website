@@ -19,8 +19,9 @@ const LandscapeAnimation = () => {
       const d = Math.floor(diff / (1000 * 60 * 60 * 24));
       const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
 
-      setTimeLeft(`${d}d ${h}h ${m}m`);
+      setTimeLeft(`${d}d ${h}h ${m}m ${s}s`);
     }, 1000);
 
     return () => clearInterval(interval);
@@ -669,7 +670,7 @@ const LandscapeAnimation = () => {
       </div>
       <div className="overlay">
         <h1>AUGIE VIKINGS</h1>
-        <p>Hackathon · 2025</p>
+        <p>Hackathon · 2026</p>
         <div className="timer">{timeLeft}</div>
       </div>
     </>

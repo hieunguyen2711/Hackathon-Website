@@ -102,9 +102,9 @@ export default function App() {
             <Home />
             <Tracks />
             <FAQs  />
-            <Sponsor />
+            <Sponsor /> 
+            <h2 style={{ textAlign: "center" }}>Our Team</h2>
             <section className="team-section" id="team">
-              <h2>Our Team</h2>
               <InfiniteMenu items={items} scale={1} />
             </section>
           </div>
