@@ -1,3 +1,25 @@
+.tracks {
+  text-align: center;
+  width: 400px; 
+  height: 500px; 
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .tracks {
+    width: 100%; 
+  
+  }
+}
+
+.tracks h1 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--viridian);
+}
+
 .stack-container {
   position: relative;
   width: 100%;
