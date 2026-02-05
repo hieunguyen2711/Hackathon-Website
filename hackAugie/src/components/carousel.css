@@ -29,9 +29,7 @@
   height: 400px;
   overflow: hidden;
   margin: 0 auto;
-  @media (max-width:800px) {
-    width:350px;
-  }
+
 }
 .sponsor-item {
   width: 400px;

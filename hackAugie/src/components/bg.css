@@ -4,6 +4,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media (max-width: 800px) {
+    padding: 1rem 1rem;
+  }
 }
 
 .parchment::before,
