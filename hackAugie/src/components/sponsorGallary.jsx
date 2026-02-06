@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./carousel.css";
+import "./sponsor.css";
 
 const SLIDE_WIDTH = 420;
 const SLIDE_GAP = 40;

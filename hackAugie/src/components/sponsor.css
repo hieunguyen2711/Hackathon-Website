@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.sponsor-section {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.sponsor-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--viridian);
+}
+.sponsor-section-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+@media  (max-width:800px) {
+  .sponsor-section-grid {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+}
+.sponsor-logo {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  @media (max-width:800px) {
+    width:350px;
+  }
+}
+.sponsor-item {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 60px;
+}
+
+.image-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+.image-track img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+
+.carousel-container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.carousel-window {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  perspective: 1200px;
+  perspective-origin: center center;
+  overflow: visible;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform-origin: center center;
+  will-change: transform;
+  object-fit: contain;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: 
+    translateY(-50%) 
+    rotateY(-12deg) 
+    rotateX(3deg)
+    scale(0.95);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.carousel-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  animation: shimmer 3s infinite;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 200%;
+  }
+}
+
+.carousel-slide:hover {
+  transform: 
+    translateY(-50%) 
+    rotateY(-8deg) 
+    rotateX(2deg)
+    scale(1);
+  box-shadow: 
+    -25px 50px 100px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(1.05);
+  transition: transform 0.6s ease;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.1);
+}
+
+/* Gradient overlays on edges for fade effect */
+.carousel-window::before,
+.carousel-window::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.carousel-window::before {
+  left: 0;
+}
+
+.carousel-window::after {
+  right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .carousel-slide {
+    width: 360px;
+    height: 320px;
+  }
+  
+  .carousel-window {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: 280px;
+    height: 320px;
+  }
+  
+  .carousel-window {
+    height: 420px;
+  }
+  
+  .carousel-track {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    width: 240px;
+    height: 340px;
+  }
+  
+  .carousel-window {
+    height: 360px;
+  }
+  
+  .carousel-track {
+    gap: 20px;
+  }
+}
+.carousel-slide {
+  position: relative;
+}
+
+.slide-label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-slide:hover .slide-label {
+  opacity: 1;
+}
