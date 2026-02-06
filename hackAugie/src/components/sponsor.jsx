@@ -1,37 +1,38 @@
 import { useEffect, useState } from "react";
 import LogoLoop from "./LogoLoop";
 import logo from "../assets/imgs/logo.png";
-
+import "./sponsor.css";
 export default function Sponsor() {
   const [index, setIndex] = useState(0);
 
-  const sponsors = [
+  const imageLogos = [
     {
-      name: "Google",
-      logo: logo,
-      url: "https://google.com",
-      desc: "Google is a global technology company specializing in Internet-related services and products.",
+      src: logo,
+      alt: "Company 1",
+      href: "https://company1.com",
+      desc: "Company 1 is a leading provider of innovative solutions in the tech industry, specializing in software development and cloud services.",
     },
     {
-      name: "Amazon",
-      logo: logo,
-      url: "https://amazon.com",
-      desc: "Amazon is a multinational technology company focusing on e-commerce, cloud computing, and artificial intelligence.",
+      src: logo,
+      alt: "Company 2",
+      href: "https://company2.com",
+      desc: "Company 1 is a leading provider of innovative solutions in the tech industry, specializing in software development and cloud services.",
+    },
+    {
+      src: logo,
+      alt: "Company 3",
+      href: "https://company3.com",
+      desc: "Company 1 is a leading provider of innovative solutions in the tech industry, specializing in software development and cloud services.",
     },
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % sponsors.length);
+      setIndex((prev) => (prev + 1) % imageLogos.length);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [sponsors.length]);
-const imageLogos = [
-  { src: logo, alt: "Company 1", href: "https://company1.com" },
-  { src: logo, alt: "Company 2", href: "https://company2.com" },
-  { src: logo, alt: "Company 3", href: "https://company3.com" },
-];
+  }, [imageLogos.length]);
+
   return (
     <section id="sponsors">
       <div align="center">
@@ -44,55 +45,45 @@ const imageLogos = [
                 className="image-track"
                 style={{ transform: `translateX(-${index * 400}px)` }}
               >
-                {sponsors.map((s) => (
-                  <div key={s.name} className="sponsor-item">
+                {imageLogos.map((s) => (
+                  <div key={s.alt} className="sponsor-item">
                     <a
-                      key={s.name}
-                      href={s.url}
+                      key={s.alt}
+                      href={s.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <img src={s.logo} alt={s.name} />
+                      <img src={s.src} alt={s.alt} />
                     </a>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <p style={{ marginTop: "1rem", padding: "0 1rem" }}>{sponsors[index].desc}</p>
+              <p style={{ marginTop: "1rem", padding: "0 1rem" }}>
+                {imageLogos[index].desc}
+              </p>
             </div>
           </div>
         </div>
-        <div style={{ marginTop: "4rem" }}></div>
-        <CircularCarousel images={sponsors} />
       </div>
-       <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
-      {/* Basic horizontal loop */}
-      <LogoLoop
-        logos={imageLogos}
-        speed={100}
-        direction="left"
-        logoHeight={60}
-        gap={60}
-        hoverSpeed={0}
-        scaleOnHover
-        fadeOut
-        fadeOutColor="#ffffff"
-        ariaLabel="Technology partners"
-      />
-      
-      {/* Vertical loop with deceleration on hover */}
-      <LogoLoop
-        logos={imageLogos}
-        speed={100}
-        direction="left"
-        logoHeight={60}
-        gap={60}
-        hoverSpeed={0}
-        fadeOut
-  useCustomRender={false}
-/>
-    </div>
+      <div
+        style={{ height: "200px", position: "relative", overflow: "hidden" }}
+      >
+        {/* Basic horizontal loop */}
+        <LogoLoop
+          logos={imageLogos}
+          speed={100}
+          direction="left"
+          logoHeight={70}
+          gap={60}
+          hoverSpeed={0}
+          scaleOnHover
+          fadeOut
+          fadeOutColor="Transparent"
+          ariaLabel="Technology partners"
+        />
+      </div>
     </section>
   );
 }
