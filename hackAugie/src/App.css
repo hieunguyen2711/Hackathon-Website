@@ -515,6 +515,30 @@ section {
   margin: 6px 0 0;
 }
 
+.landing-wrapper {
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.landing-wrapper.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.home-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+.home-wrapper.entered {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 @media (max-width: 720px) {
   .nav-links {
     display: none;
