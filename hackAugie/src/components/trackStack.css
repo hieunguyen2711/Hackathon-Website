@@ -1,16 +1,21 @@
+/* ======================
+   Tracks Section
+   ====================== */
+
 .tracks {
   text-align: center;
-  width: 400px; 
-  height: 500px; 
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+  width: 400px;
+  min-height: 520px; /* allows growth */
+  margin: 50px auto 0;
+  padding: 20px;
+  position: relative; /* anchors children */
+  overflow-x: hidden;
 }
+
 @media (max-width: 600px) {
   .tracks {
-    width: 100%; 
-  
+    width: 100%;
+    min-height: 460px;
   }
 }
 
@@ -20,84 +25,111 @@
   color: var(--viridian);
 }
 
+/* ======================
+   Stack Container
+   ====================== */
+
 .stack-container {
-  position: relative;
+  position: relative; /* stays in flow */
   width: 100%;
-  height: 100%;
+  height: 420px;
+  margin: 0 auto;
   perspective: 600px;
-  @media (min-width: 450px) and (max-width: 600px) {
-    right:-15%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width: 450px) {
+
+@media (max-width: 600px) {
   .stack-container {
-    position: absolute;
-    right: 0%;
-    width: 100%;
-    height: 100%;
-    perspective: 0px;
-    margin: 0;
+    height: 380px;
+    perspective: none;
   }
-   
 }
-.stack-card-rotate {
-  position: absolute;
-  width: 100%;
+
+/* ======================
+   Card Wrappers
+   ====================== */
+
+.stack-card-rotate,
+.stack-card-rotate-disabled {
+  position: absolute; /* allowed */
+  width: 90%;
   height: 100%;
+  left: -5%;
+  transform: translateX(-50%);
+}
+
+.stack-card-rotate {
   cursor: grab;
 }
 
 .stack-card-rotate-disabled {
-  position: absolute;
-  
-  width: 100%;
-  height: 100%;
   cursor: pointer;
 }
 
+/* ======================
+   Card
+   ====================== */
+
 .stack-card {
+  width: 100%;
+  height: 100%;
   border-radius: 1rem;
   overflow: hidden;
-  width: 300px;
-  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.stack-card img {
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+/* ======================
+   Images
+   ====================== */
 
+.stack-card img,
 .stack-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
+
+/* ======================
+   Card Content
+   ====================== */
+
 .track-card-content {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   border-radius: 12px;
   overflow: hidden;
 }
+
+/* ======================
+   Track Info Overlay
+   ====================== */
 
 .track-info {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6), transparent);
-  color: white;
   padding: 20px;
   text-align: left;
+  color: white;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6),
+    transparent
+  );
 }
 
 .track-info h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 8px;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -106,4 +138,11 @@
   margin: 0;
   font-size: 0.95rem;
   opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .stack-card-rotate,
+.stack-card-rotate-disabled {
+  width: 90%;
+  }
 }

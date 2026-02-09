@@ -124,6 +124,7 @@ export default function App() {
             <div className="section-header">
               <h1 className="section-headline">Tracks</h1>
               <p className="section-subtitle">Coming soon</p>
+               {/* <Tracks /> */}
             </div>
           </section>
           <FAQs />
@@ -131,6 +132,7 @@ export default function App() {
             <div className="section-header">
               <h1 className="section-headline">Our Allies</h1>
               <p className="section-subtitle">Coming soon</p>
+              {/* <Sponsor /> */} 
             </div>
           </section>
           <section style={{marginTop:'30px'
