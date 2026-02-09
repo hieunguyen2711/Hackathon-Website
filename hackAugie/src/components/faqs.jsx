@@ -1,13 +1,14 @@
 import Accordion from "react-bootstrap/Accordion";
-import oldMain from "/src/assets/imgs/building.png";
 import { InstagramIcon } from "../assets/instagram";
 export default function FAQs() {
   return (
     <section className="faq-section" id="faq">
-      <h1 align="center">FAQs</h1>
-      <div className="faq-grid">
-        <div className="faq-accordion">
-          <Accordion>
+      <div className="faq-header">
+        <h2>Lore & Wisdom</h2>
+        <p className="faq-subtitle">Frequently Asked Questions</p>
+      </div>
+      <div className="faq-panel">
+        <Accordion className="faq-accordion">
             <Accordion.Item eventKey="0">
               <Accordion.Header>How it works</Accordion.Header>
               <Accordion.Body>
@@ -220,11 +221,6 @@ export default function FAQs() {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-        </div>
-
-        <div className="faq-image">
-          <img src={oldMain} alt="Pixelated building" />
-        </div>
       </div>
     </section>
   );

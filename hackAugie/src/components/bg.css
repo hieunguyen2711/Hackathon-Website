@@ -1,9 +1,8 @@
 .parchment {
   position: relative;
   padding: 3rem 4rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #e9f6ff 0%, #a7dbff 45%, #2a6fb8 100%);
+  background-attachment: fixed;
   @media (max-width: 800px) {
     padding: 1rem 1rem;
   }
@@ -11,23 +10,5 @@
 
 .parchment::before,
 .parchment::after {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  bottom: 1.5rem;
-  width: 32px;
-  background-image: url("./assets/norse-runes.png");
-  background-repeat: repeat-y;
-  background-size: contain;
-
-  opacity: 0.8;
-}
-
-.parchment::before {
-  left: 1rem;
-}
-
-.parchment::after {
-  right: 1rem;
-  transform: scaleX(-1);
+  display: none;
 }

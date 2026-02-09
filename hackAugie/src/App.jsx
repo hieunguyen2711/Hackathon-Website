@@ -51,17 +51,20 @@ export default function App() {
 
   return (
     <div className="app-root">
+      <Navbar />
       <div className={`landing-wrapper ${entered ? "fade-out" : ""}`}>
         <Landing />
       </div>
       <BackGround>
         <div className={`home-wrapper ${entered ? "entered" : ""}`}>
-          <Navbar />
           <Home />
           <Tracks />
           <FAQs />
           <Sponsor />
-          <h2 style={{ textAlign: "center" }}>Our Team</h2>
+          <h2 style={{ textAlign: "center" }}>The Crew</h2>
+          <p style={{ textAlign: "center", marginTop: "0.5rem" }}>
+            The brave souls steering this ship.
+          </p>
           <section className="team-section" id="team">
             <InfiniteMenu items={items} scale={1} />
           </section>

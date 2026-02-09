@@ -581,20 +581,112 @@ const LandscapeAnimation = () => {
           justify-content: center;
           pointer-events: none;
           text-align: center;
-        }
-
-        .overlay h1 {
-          font-size: clamp(3rem, 8vw, 6rem);
-          letter-spacing: 0.2em;
           color: #ffffff;
-          text-shadow: 0 8px 30px rgba(0,0,0,0.7);
+          padding: 0 6vw;
         }
 
-        .overlay p {
+        .overlay-eyebrow {
+          font-size: 0.85rem;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          color: #f2c94c;
+          margin-bottom: 1.2rem;
+        }
+
+        .hero-title {
+          font-size: clamp(3.4rem, 10vw, 6.4rem);
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          text-shadow: 0 8px 30px rgba(0,0,0,0.7);
+          margin: 0;
+        }
+
+        .title-light {
+          color: #f5f7ff;
+        }
+
+        .title-gold {
+          color: #f2c94c;
+        }
+
+        .hero-quote {
           margin-top: 1rem;
-          font-size: 1rem;
-          letter-spacing: 0.25em;
-          opacity: 0.75;
+          font-size: 1.2rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          opacity: 0.9;
+        }
+
+        .hero-actions {
+          margin-top: 2.2rem;
+          display: flex;
+          gap: 20px;
+          pointer-events: auto;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero-btn {
+          padding: 12px 26px;
+          border-radius: 6px;
+          font-size: 0.95rem;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          border: 2px solid #f2c94c;
+          font-weight: 700;
+          transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+        }
+
+        .hero-btn.primary {
+          background: #f2c94c;
+          color: #0b1222;
+          box-shadow: 0 10px 24px rgba(242, 201, 76, 0.28);
+        }
+
+        .hero-btn.primary:hover {
+          transform: translateY(-2px);
+        }
+
+        .hero-btn.outline {
+          color: #f2c94c;
+          background: transparent;
+        }
+
+        .hero-btn.outline:hover {
+          background: rgba(242, 201, 76, 0.12);
+          transform: translateY(-2px);
+        }
+
+        .hero-date {
+          margin-top: 2.6rem;
+          padding: 10px 24px;
+          border-top: 1px solid rgba(242, 201, 76, 0.35);
+          border-bottom: 1px solid rgba(242, 201, 76, 0.35);
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          color: #f2c94c;
+        }
+
+        .scroll-indicator {
+          margin-top: 18px;
+          width: 18px;
+          height: 18px;
+          border-right: 2px solid #f2c94c;
+          border-bottom: 2px solid #f2c94c;
+          transform: rotate(45deg);
+          animation: bounce 1.6s infinite;
+        }
+
+        @keyframes bounce {
+          0%, 100% {
+            transform: rotate(45deg) translateY(0);
+            opacity: 0.8;
+          }
+          50% {
+            transform: rotate(45deg) translateY(6px);
+            opacity: 1;
+          }
         }
           .viking {
           position: absolute;
@@ -669,9 +761,18 @@ const LandscapeAnimation = () => {
         </div>
       </div>
       <div className="overlay">
-        <h1>AUGIE VIKINGS</h1>
-        <p>Hackathon · 2026</p>
-        <div className="timer">{timeLeft}</div>
+        <div className="overlay-eyebrow">The Voyage Begins</div>
+        <h1 className="hero-title">
+          <span className="title-light">Hack</span>
+          <span className="title-gold">Augie</span>
+        </h1>
+        <div className="hero-quote">"To new lands, new code, and glory."</div>
+        <div className="hero-actions">
+          <a className="hero-btn primary" href="#register">Register Now</a>
+          <a className="hero-btn outline" href="#timeline">View Schedule</a>
+        </div>
+        <div className="hero-date">October 12-14, 2024 · Augustana College · Valhalla Hall</div>
+        <div className="scroll-indicator" aria-hidden="true"></div>
       </div>
     </>
   );
