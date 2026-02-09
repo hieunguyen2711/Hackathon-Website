@@ -1,13 +1,14 @@
 import Accordion from "react-bootstrap/Accordion";
-import oldMain from "/src/assets/imgs/building.png";
 import { InstagramIcon } from "../assets/instagram";
 export default function FAQs() {
   return (
     <section className="faq-section" id="faq">
-      <h1 align="center">FAQs</h1>
-      <div className="faq-grid">
-        <div className="faq-accordion">
-          <Accordion>
+      <div className="faq-header">
+        <h2 className="section-headline">Lore & Wisdom</h2>
+        <p className="section-subtitle">Frequently Asked Questions</p>
+      </div>
+      <div className="faq-panel">
+        <Accordion className="faq-accordion">
             <Accordion.Item eventKey="0">
               <Accordion.Header>How it works</Accordion.Header>
               <Accordion.Body>
@@ -197,10 +198,10 @@ export default function FAQs() {
                 </div>
               </Accordion.Body>
             </Accordion.Item>
-            <Accordion.Item eventKey="8">
-              <Accordion.Header>Travel Reinbursment</Accordion.Header>
+            <Accordion.Item eventKey="8" className="travel-reimb">
+              <Accordion.Header>Travel Reimbursement</Accordion.Header>
               <Accordion.Body>
-                <div className="no-list">
+                <div className="no-list travel-reimb">
                   <p>We want HackAugie to be accessible to students from across the Midwest. To support this, we offer limited travel reimbursement for eligible participants</p>
 
                   <h2>What We Cover</h2>
@@ -220,11 +221,6 @@ export default function FAQs() {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-        </div>
-
-        <div className="faq-image">
-          <img src={oldMain} alt="Pixelated building" />
-        </div>
       </div>
     </section>
   );

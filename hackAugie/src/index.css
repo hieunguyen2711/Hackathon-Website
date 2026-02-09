@@ -1,18 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 :root {
-  --bg: #f6f7fb;
+  --bg: #00437c;
   --surface: #ffffff;
   --text: #0f172a;
   --muted: oklch(0.97 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #00437c;
   --primary-2: #6ee7d5;
   --accent: oklch(0.97 0 0);
   --border: oklch(0.922 0 0);
   --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
   --radius: 0.625rem;
-  --blue-500: #4285f4;
+  --blue-500: #00437c;
   --green-500: #34a853;
   --red-500: #ea4335;
-  --yellow-500: #f9ab00;
+  --yellow-500: #ffaa00;
   --halftone-blue: #57caff;
   --halftone-green: #5cdb6d;
   --halftone-yellow: #ffd427;
@@ -28,7 +30,7 @@
 
   --gradient: linear-gradient(135deg, #4b6bff 0%, #6ee7d5 45%, #ffb74b 100%);
 
-  --background: oklch(1 0 0);
+  --background: #00437c;
 
   --foreground: oklch(0.145 0 0);
 
@@ -39,8 +41,6 @@
   --popover: oklch(1 0 0);
 
   --popover-foreground: oklch(0.145 0 0);
-
-  --primary-foreground: oklch(0.985 0 0);
 
   --secondary: oklch(0.97 0 0);
 
@@ -99,7 +99,6 @@
 html {
   scroll-behavior: smooth;
 }
-p,
 h1,
 h2,
 h3,
@@ -115,13 +114,23 @@ h6 {
   font-size: 1.56rem;
 }
 
-body {
+p {
   margin: 0;
   font-family:
-    "Norse",
+    "Montserrat",
     system-ui,
     -apple-system,
     sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: var(--bg);
   /* background: 
     radial-gradient(circle at 20% 20%, rgba(75, 107, 255, 0.18), transparent 35%),
     radial-gradient(circle at 80% 0%, rgba(255, 183, 75, 0.22), transparent 32%),
@@ -175,8 +184,10 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
-  font-size: 1.8rem;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 @media (max-width:500px) {
   .nav-bar {
@@ -187,7 +198,7 @@ ul li {
 }
 .team-section {
   height: 700px;
-  position: relative;
+  padding: 0px 6vw 90px;
   margin: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -200,13 +211,15 @@ ul li {
 }
 .nav-links {
   display: flex;
-  gap: 12px;
+  gap: 22px;
   align-items: center;
   font-weight: 600;
+  font-family: "Norse", system-ui, -apple-system, sans-serif;
 }
 
 .nav-links a {
-  padding: 10px 12px;
+  color: #ffaa00;
+  padding: 6px 4px;
   border-radius: 999px;
   transition:
     transform 160ms ease,
@@ -214,13 +227,189 @@ ul li {
 }
 
 .nav-links a:hover {
-  background: rgba(75, 107, 255, 0.08);
+  background: rgba(242, 201, 76, 0.12);
   transform: translateY(-1px);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(0, 47, 85, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: "Norse", system-ui, -apple-system, sans-serif;
+}
+
+.site-header .brand {
+  font-size: 1.1rem;
+  color: #ffaa00;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: "Norse", system-ui, -apple-system, sans-serif;
+}
+
+.site-header .brand span {
+  color: inherit;
+}
+
+.nav-cta {
+  background: #ffaa00;
+  color: #002f55;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(242, 201, 76, 0.3);
+}
+
+.landing {
+  padding-top: 76px;
 }
 
 .home h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+}
+
+/* Welcome section styling */
+.welcome-section {
+  padding: 96px 6vw 70px;
+  text-align: center;
+  background: linear-gradient(180deg, #002f55 0%, #003a68 100%);
+  color: #f5f7ff;
+  border-radius: 18px;
+  margin: 0 auto 70px;
+  max-width: 1200px;
+  box-shadow: 0 30px 60px rgba(3, 10, 24, 0.55);
+}
+
+.welcome-eyebrow {
+  color: #ffaa00;
+  font-size: 1.6rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}
+
+.section-headline {
+  font-family:
+    "Norse",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  font-size: clamp(2.4rem, 5.2vw, 3.6rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  color: #f5f7ff;
+}
+
+.section-subtitle,
+.timeline-subtitle,
+.faq-subtitle {
+  margin-top: 12px;
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.95rem;
+  color: #00437c;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+.welcome-title span {
+  color: #ffaa00;
+}
+
+.welcome-divider {
+  width: 80px;
+  height: 3px;
+  background: #ffaa00;
+  margin: 18px auto 28px;
+  border-radius: 999px;
+}
+
+.welcome-section .section-subtitle {
+  color: #f5f7ff;
+}
+
+.welcome-copy {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  color: rgba(245, 247, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.welcome-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.welcome-card {
+  background: linear-gradient(180deg, #002f55 0%, #003a68 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px 24px 30px;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.welcome-card h3 {
+  margin-top: 14px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f5f7ff;
+}
+
+.welcome-card p {
+  color: rgba(245, 247, 255, 0.65);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.welcome-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  color: #ffaa00;
+  background: rgba(255, 170, 0, 0.12);
+  border: 1px solid rgba(255, 170, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+  .welcome-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-section {
+    padding: 80px 6vw 60px;
+  }
 }
 
 /* Home Hero Section */
@@ -245,97 +434,133 @@ ul li {
   max-width: 600px;
 }
 
-/* Colors */
-.faq-section {
-  padding: 3rem 1rem;
-}
-.faq-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--viridian);
-}
-.faq-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-
+/* Timeline layout */
+.timeline-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  align-items: start;
 }
-@media (max-width: 900px) {
-  .faq-grid {
+
+@media (max-width: 720px) {
+  .timeline-grid {
     grid-template-columns: 1fr;
   }
-
-  .faq-image {
-    order: -1;
-  }
 }
+
+/* FAQ section */
+.faq-section {
+  padding: 32px 6vw 90px;
+  color: #00437c;
+  background: transparent;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 36px;
+  color: inherit;
+}
+
+.faq-header h2 {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: inherit;
+}
+
+.faq-section .section-headline,
+.faq-section .section-subtitle {
+  color: #00437c;
+}
+
+.crew-title {
+  color: #f5f7ff;
+  margin-top: 156px;
+}
+
+.faq-subtitle {
+  margin-top: 12px;
+}
+
+.timeline-header .section-headline {
+  color: inherit !important;
+}
+
+.faq-panel {
+  max-width: 860px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #002f55 0%, #003a68 100%);
+  border-radius: 18px;
+  padding: 6px 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 50px rgba(4, 10, 24, 0.45);
+}
+
 .faq-accordion .accordion {
   background: transparent;
   border: none;
 }
 
 .faq-accordion .accordion-item {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  overflow: hidden;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(242, 201, 76, 0.18);
+  border-radius: 0;
+  margin: 0 28px;
 }
 
-.faq-accordion .accordion-header button {
+.faq-accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.faq-accordion .accordion-button {
   background: transparent;
-  color: #f5f5f5;
+  color: #f5f7ff;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 1.25rem 1.5rem;
+  padding: 22px 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.faq-accordion .accordion-header button:not(.collapsed) {
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffffff;
+.faq-accordion .accordion-button:not(.collapsed) {
+  color: #f5f7ff;
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
 }
 
 .faq-accordion .accordion-body {
-  color: #cfcfd4;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  padding: 1.25rem 1.5rem;
-}
-.accordion-button::after {
-  filter: invert(1);
-}
-.faq-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: rgba(245, 247, 255, 0.7);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  padding: 0 0 22px 0;
 }
 
-.faq-image img {
-  width: 100%;
-  max-width: 420px;
-
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
-  opacity: 0.9;
-}
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.travel-reimb,
+.travel-reimb * {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
-.faq-image img {
-  animation: float 6s ease-in-out infinite;
+.faq-accordion .accordion-button::after {
+  background-image: none;
+  content: "+";
+  color: #ffaa00;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transform: none;
+  margin-left: auto;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  content: "−";
 }
 

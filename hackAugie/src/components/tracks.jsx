@@ -47,7 +47,7 @@ export default function Tracks() {
 
   return (
     <div className="tracks" >
-      <h1>Tracks</h1>
+      <h1 className="section-headline">Tracks</h1>
         <TrackStack 
           cards={trackCards}
           sendToBackOnClick={true}

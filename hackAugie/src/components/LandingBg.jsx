@@ -100,12 +100,13 @@ const LandscapeAnimation = () => {
         }
 
         :root {
-          --v1: #f0f0f0;
+          --v0: #002f55;
+          --v1: #00437c;
           --v2: #00437c;
           --v3: #ffaa00;
           --transparentv3: #5e30d900;
           --v4: #00437c;
-          --s1: #57caff;
+          --s1: #00437c;
           --s2: #3c3738;
           --cloud: #ffe7a5;
         }
@@ -127,7 +128,7 @@ const LandscapeAnimation = () => {
 
         .landscape {
           height: 100vh;
-          background-image: linear-gradient(var(--v1), var(--s1), var(--v1));
+          background-image: linear-gradient(180deg, #002f55 0%, #00437c 100%);
           position: relative;
           z-index: 1;
           overflow: hidden;
@@ -140,7 +141,7 @@ const LandscapeAnimation = () => {
           bottom: 50%;
           left: -10vmin;
           background: var(--s1);
-          background-image: linear-gradient(var(--v1), var(--v2) 30%, var(--v3));
+          background-image: linear-gradient(var(--v0) 0%, var(--v1) 100%);
           box-shadow: inset -10px 0 10px -10px var(--s1);
         }
         
@@ -162,7 +163,7 @@ const LandscapeAnimation = () => {
           width: 40vmin;
           box-shadow: inset -15px 0 10px -14px var(--s1);
           border-radius: 120% 50% 0% 0%/25vmin 25vmin 0% 0%;
-          background-image: linear-gradient(var(--v3), var(--v4));
+          background-image: linear-gradient(var(--v0) 0%, var(--v4) 100%);
         }
 
         .mountain-3 {
@@ -172,7 +173,7 @@ const LandscapeAnimation = () => {
           left: auto;
           height: 12vmin;
           color: var(--v3);
-          background-image: linear-gradient(var(--s1), var(--v4));
+          background-image: linear-gradient(var(--v0) 0%, var(--v4) 100%);
           box-shadow: inset 15px 0 10px -10px var(--s1);
         }
 
@@ -581,20 +582,113 @@ const LandscapeAnimation = () => {
           justify-content: center;
           pointer-events: none;
           text-align: center;
-        }
-
-        .overlay h1 {
-          font-size: clamp(3rem, 8vw, 6rem);
-          letter-spacing: 0.2em;
           color: #ffffff;
-          text-shadow: 0 8px 30px rgba(0,0,0,0.7);
+          padding: 0 6vw;
         }
 
-        .overlay p {
+        .overlay-eyebrow {
+          font-size: 0.85rem;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          color: #ffaa00;
+          margin-bottom: 1.2rem;
+        }
+
+        .hero-title,
+        .hero-title * {
+          font-size: clamp(3.4rem, 10vw, 6.4rem);
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          font-family: "Norse", system-ui, -apple-system, sans-serif !important;
+          text-shadow: 0 8px 30px rgba(0,0,0,0.7);
+          margin: 0;
+        }
+
+        .title-light {
+          color: #f5f7ff;
+        }
+
+        .title-gold {
+          color: #ffaa00;
+        }
+
+        .hero-quote {
           margin-top: 1rem;
-          font-size: 1rem;
-          letter-spacing: 0.25em;
-          opacity: 0.75;
+          font-size: 1.2rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          opacity: 0.9;
+        }
+
+        .hero-actions {
+          margin-top: 2.2rem;
+          display: flex;
+          gap: 20px;
+          pointer-events: auto;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero-btn {
+          padding: 12px 26px;
+          border-radius: 6px;
+          font-size: 0.95rem;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          border: 2px solid #ffaa00;
+          font-weight: 700;
+          transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+        }
+
+        .hero-btn.primary {
+          background: #ffaa00;
+          color: #0b1222;
+          box-shadow: 0 10px 24px rgba(255, 170, 0, 0.28);
+        }
+
+        .hero-btn.primary:hover {
+          transform: translateY(-2px);
+        }
+
+        .hero-btn.outline {
+          color: #ffaa00;
+          background: transparent;
+        }
+
+        .hero-btn.outline:hover {
+          background: rgba(255, 170, 0, 0.12);
+          transform: translateY(-2px);
+        }
+
+        .hero-date {
+          margin-top: 5.5rem;
+          padding: 10px 24px;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .scroll-indicator {
+          margin-top: 28px;
+          width: 18px;
+          height: 18px;
+          border-right: 2px solid #ffaa00;
+          border-bottom: 2px solid #ffaa00;
+          transform: rotate(45deg);
+          animation: bounce 1.6s infinite;
+        }
+
+        @keyframes bounce {
+          0%, 100% {
+            transform: rotate(45deg) translateY(0);
+            opacity: 0.8;
+          }
+          50% {
+            transform: rotate(45deg) translateY(6px);
+            opacity: 1;
+          }
         }
           .viking {
           position: absolute;
@@ -661,17 +755,20 @@ const LandscapeAnimation = () => {
           <div className="stone">
             <img src="/pixel-viking.png" alt="Pixel Viking" className="viking" />
           </div>
-          <div className="grass"></div>
-          <div className="grass grass-1"></div>
-          <div className="grass grass-2"></div>
-          <div className="reed"></div>
-          <div className="reed reed-1"></div>
         </div>
       </div>
       <div className="overlay">
-        <h1>AUGIE VIKINGS</h1>
-        <p>Hackathon · 2026</p>
-        <div className="timer">{timeLeft}</div>
+        <div className="overlay-eyebrow"></div>
+        <h1 className="hero-title">
+          <span className="title-light">Hack</span>
+          <span className="title-gold">Augie</span>
+        </h1>
+        <div className="hero-quote">"To new lands, new code, and glory."</div>
+        <div className="hero-actions">
+          <a className="hero-btn primary" href="#register">Register Now</a>
+        </div>
+        <div className="hero-date">April 18-19, 2026, Augustana College</div>
+        <div className="scroll-indicator" aria-hidden="true"></div>
       </div>
     </>
   );
