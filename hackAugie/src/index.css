@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg: #f6f7fb;
+  --bg: #00437c;
   --surface: #ffffff;
   --text: #0f172a;
   --muted: oklch(0.97 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #00437c;
   --primary-2: #6ee7d5;
   --accent: oklch(0.97 0 0);
   --border: oklch(0.922 0 0);
   --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
   --radius: 0.625rem;
-  --blue-500: #4285f4;
+  --blue-500: #00437c;
   --green-500: #34a853;
   --red-500: #ea4335;
-  --yellow-500: #f9ab00;
+  --yellow-500: #ffaa00;
   --halftone-blue: #57caff;
   --halftone-green: #5cdb6d;
   --halftone-yellow: #ffd427;
@@ -30,7 +30,7 @@
 
   --gradient: linear-gradient(135deg, #4b6bff 0%, #6ee7d5 45%, #ffb74b 100%);
 
-  --background: oklch(1 0 0);
+  --background: #00437c;
 
   --foreground: oklch(0.145 0 0);
 
@@ -41,8 +41,6 @@
   --popover: oklch(1 0 0);
 
   --popover-foreground: oklch(0.145 0 0);
-
-  --primary-foreground: oklch(0.985 0 0);
 
   --secondary: oklch(0.97 0 0);
 
@@ -132,6 +130,7 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
+  background: var(--bg);
   /* background: 
     radial-gradient(circle at 20% 20%, rgba(75, 107, 255, 0.18), transparent 35%),
     radial-gradient(circle at 80% 0%, rgba(255, 183, 75, 0.22), transparent 32%),
@@ -199,7 +198,7 @@ ul li {
 }
 .team-section {
   height: 700px;
-  position: relative;
+  padding: 0px 6vw 90px;
   margin: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -215,10 +214,11 @@ ul li {
   gap: 22px;
   align-items: center;
   font-weight: 600;
+  font-family: "Norse", system-ui, -apple-system, sans-serif;
 }
 
 .nav-links a {
-  color: #f2c94c;
+  color: #ffaa00;
   padding: 6px 4px;
   border-radius: 999px;
   transition:
@@ -237,17 +237,19 @@ ul li {
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(10, 15, 26, 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 47, 85, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: "Norse", system-ui, -apple-system, sans-serif;
 }
 
 .site-header .brand {
   font-size: 1.1rem;
-  color: #f2c94c;
+  color: #ffaa00;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-family: "Norse", system-ui, -apple-system, sans-serif;
 }
 
 .site-header .brand span {
@@ -255,8 +257,8 @@ ul li {
 }
 
 .nav-cta {
-  background: #f2c94c;
-  color: #0b1222;
+  background: #ffaa00;
+  color: #002f55;
   padding: 10px 18px;
   border-radius: 999px;
   font-weight: 700;
@@ -282,8 +284,7 @@ ul li {
 .welcome-section {
   padding: 96px 6vw 70px;
   text-align: center;
-  background: radial-gradient(circle at top, rgba(27, 43, 69, 0.65), rgba(9, 17, 34, 0.95) 60%),
-    #0b1222;
+  background: linear-gradient(180deg, #002f55 0%, #003a68 100%);
   color: #f5f7ff;
   border-radius: 18px;
   margin: 0 auto 70px;
@@ -292,29 +293,63 @@ ul li {
 }
 
 .welcome-eyebrow {
-  color: #f2c94c;
+  color: #ffaa00;
   font-size: 1.6rem;
   letter-spacing: 0.2em;
   margin-bottom: 10px;
 }
 
-.welcome-title {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  letter-spacing: 0.08em;
+.section-headline {
+  font-family:
+    "Norse",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  font-size: clamp(2.4rem, 5.2vw, 3.6rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
   color: #f5f7ff;
 }
 
+.section-subtitle,
+.timeline-subtitle,
+.faq-subtitle {
+  margin-top: 12px;
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.95rem;
+  color: #00437c;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
 .welcome-title span {
-  color: #f2c94c;
+  color: #ffaa00;
 }
 
 .welcome-divider {
   width: 80px;
   height: 3px;
-  background: #f2c94c;
+  background: #ffaa00;
   margin: 18px auto 28px;
   border-radius: 999px;
+}
+
+.welcome-section .section-subtitle {
+  color: #f5f7ff;
 }
 
 .welcome-copy {
@@ -332,8 +367,8 @@ ul li {
 }
 
 .welcome-card {
-  background: rgba(13, 24, 44, 0.88);
-  border: 1px solid rgba(242, 201, 76, 0.2);
+  background: linear-gradient(180deg, #002f55 0%, #003a68 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 28px 24px 30px;
   text-align: center;
@@ -362,9 +397,9 @@ ul li {
   place-items: center;
   margin: 0 auto;
   font-size: 1.4rem;
-  color: #f2c94c;
-  background: rgba(242, 201, 76, 0.12);
-  border: 1px solid rgba(242, 201, 76, 0.3);
+  color: #ffaa00;
+  background: rgba(255, 170, 0, 0.12);
+  border: 1px solid rgba(255, 170, 0, 0.3);
 }
 
 @media (max-width: 900px) {
@@ -415,36 +450,48 @@ ul li {
 
 /* FAQ section */
 .faq-section {
-  padding: 90px 6vw;
-  color: #f5f7ff;
+  padding: 32px 6vw 90px;
+  color: #00437c;
+  background: transparent;
 }
 
 .faq-header {
   text-align: center;
   margin-bottom: 36px;
+  color: inherit;
 }
 
 .faq-header h2 {
   font-size: clamp(2.1rem, 4vw, 3.2rem);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: inherit;
+}
+
+.faq-section .section-headline,
+.faq-section .section-subtitle {
+  color: #00437c;
+}
+
+.crew-title {
   color: #f5f7ff;
+  margin-top: 156px;
 }
 
 .faq-subtitle {
-  margin-top: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-size: 0.85rem;
-  color: #f2c94c;
+  margin-top: 12px;
+}
+
+.timeline-header .section-headline {
+  color: inherit !important;
 }
 
 .faq-panel {
-  max-width: 980px;
+  max-width: 860px;
   margin: 0 auto;
-  background: rgba(12, 22, 40, 0.9);
+  background: linear-gradient(180deg, #002f55 0%, #003a68 100%);
   border-radius: 18px;
-  padding: 10px 0;
+  padding: 6px 0;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 30px 50px rgba(4, 10, 24, 0.45);
 }
@@ -492,10 +539,21 @@ ul li {
   padding: 0 0 22px 0;
 }
 
+.travel-reimb,
+.travel-reimb * {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 .faq-accordion .accordion-button::after {
   background-image: none;
   content: "+";
-  color: #f2c94c;
+  color: #ffaa00;
   font-size: 1.6rem;
   font-weight: 600;
   transform: none;

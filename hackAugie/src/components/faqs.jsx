@@ -4,8 +4,8 @@ export default function FAQs() {
   return (
     <section className="faq-section" id="faq">
       <div className="faq-header">
-        <h2>Lore & Wisdom</h2>
-        <p className="faq-subtitle">Frequently Asked Questions</p>
+        <h2 className="section-headline">Lore & Wisdom</h2>
+        <p className="section-subtitle">Frequently Asked Questions</p>
       </div>
       <div className="faq-panel">
         <Accordion className="faq-accordion">
@@ -198,10 +198,10 @@ export default function FAQs() {
                 </div>
               </Accordion.Body>
             </Accordion.Item>
-            <Accordion.Item eventKey="8">
-              <Accordion.Header>Travel Reinbursment</Accordion.Header>
+            <Accordion.Item eventKey="8" className="travel-reimb">
+              <Accordion.Header>Travel Reimbursement</Accordion.Header>
               <Accordion.Body>
-                <div className="no-list">
+                <div className="no-list travel-reimb">
                   <p>We want HackAugie to be accessible to students from across the Midwest. To support this, we offer limited travel reimbursement for eligible participants</p>
 
                   <h2>What We Cover</h2>

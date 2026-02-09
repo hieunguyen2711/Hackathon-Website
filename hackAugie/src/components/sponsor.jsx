@@ -37,7 +37,7 @@ export default function Sponsor() {
     <section id="sponsors">
       <div align="center">
         <div className="sponsor-section" style={{ textAlign: "center" }}>
-          <h2>Our Allies</h2>
+          <h2 className="section-headline">Our Allies</h2>
           <p>
             The clans that provide the resources for our journey. Without them,
             our ships would not sail.

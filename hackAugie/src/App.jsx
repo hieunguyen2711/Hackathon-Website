@@ -58,14 +58,24 @@ export default function App() {
       <BackGround>
         <div className={`home-wrapper ${entered ? "entered" : ""}`}>
           <Home />
-          <Tracks />
+          <section className="tracks tracks-placeholder" id="tracks">
+            <div className="section-header">
+              <h1 className="section-headline">Tracks</h1>
+              <p className="section-subtitle">Coming soon</p>
+            </div>
+          </section>
           <FAQs />
-          <Sponsor />
-          <h2 style={{ textAlign: "center" }}>The Crew</h2>
-          <p style={{ textAlign: "center", marginTop: "0.5rem" }}>
-            The brave souls steering this ship.
-          </p>
+          <section className="sponsors" id="sponsors">
+            <div className="section-header">
+              <h1 className="section-headline">Our Allies</h1>
+              <p className="section-subtitle">Coming soon</p>
+            </div>
+          </section>
           <section className="team-section" id="team">
+            <div className="section-header">
+              <h2 className="section-headline">The Crew</h2>
+              <p className="section-subtitle">The brave souls steering this ship.</p>
+            </div>
             <InfiniteMenu items={items} scale={1} />
           </section>
         </div>

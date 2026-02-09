@@ -255,6 +255,15 @@
 
 section {
   padding: 80px 0;
+  background: linear-gradient(180deg, #00437c 0%, #00437c 100%);
+}
+
+.tracks.tracks-placeholder {
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-bottom: 8px;
 }
 
 .section-header {
@@ -277,7 +286,7 @@ section {
 }
 
 .stats {
-  background: #ffffff;
+  background: var(--bg);
 }
 
 .stats-grid {
@@ -336,7 +345,7 @@ section {
 }
 
 .experience {
-  background: #ffffff;
+  background: var(--bg);
 }
 
 .feature-grid {
@@ -377,7 +386,7 @@ section {
 }
 
 .faq {
-  background: #ffffff;
+  background: var(--bg);
 }
 
 .faq-grid {
@@ -445,10 +454,6 @@ section {
   gap: 8px;
 }
 
-.sponsors {
-  background: #ffffff;
-}
-
 .sponsor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -508,21 +513,56 @@ section {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #f7f1d5;
+  color: #f5f7ff;
+}
+
+.timeline-header .section-subtitle {
+  margin-bottom: 32px;
 }
 
 .timeline-subtitle {
-  margin-top: 8px;
+  margin-top: 12px;
+  margin-bottom: 48px;
   text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-size: 0.9rem;
-  color: #d6b85b;
+  letter-spacing: 0.28em;
+  font-size: 0.95rem;
+  color: #00437c;
+  text-align: center;
 }
 
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 48px;
+  width: min(860px, 92vw);
+  margin: 0 auto;
+}
+
+.timeline {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.timeline .timeline-subtitle,
+.timeline .timeline-time,
+.timeline .timeline-content p {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.timeline .timeline-day h3,
+.timeline .timeline-content h4 {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
 }
 
 .timeline-day h3 {
@@ -534,7 +574,7 @@ section {
   position: relative;
   padding-bottom: 12px;
 }
-
+  color: #00437c;
 .timeline-day h3::after {
   content: "";
   position: absolute;
@@ -550,6 +590,16 @@ section {
   gap: 22px;
   position: relative;
   padding-left: 28px;
+}
+
+.sponsors {
+  background: #f5f7ff;
+  color: #00437c;
+}
+
+.sponsors .section-headline,
+.sponsors .section-subtitle {
+  color: #00437c;
 }
 
 .timeline-items::before {
