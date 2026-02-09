@@ -7,7 +7,15 @@ import FAQs from "./components/faqs.jsx";
 import Tracks from "./components/tracks.jsx";
 import BackGround from "./components/Background.jsx";
 import Sponsor from "./components/sponsor.jsx";
- import InfiniteMenu from "./components/InfiniteMenu";
+import InfiniteMenu from "./components/InfiniteMenu";
+import Quinxie from "./assets/members/QuinxieDoan.jpg";
+import Austin from "./assets/members/AustinDwomoh.jpg";
+import Imane from "./assets/members/QuinxieDoan.jpg";
+import Robin from "./assets/members/MinhNguyen.jpeg";
+import My from "./assets/members/HoànMỹ.png";
+import Diego from "./assets/members/DiegoGomez.jpg";
+import Hieu from "./assets/members/HieuNguyen.jpg";
+import Reda from "./assets/members/RedaOubih.jpg";
 export default function App() {
   const [entered, setEntered] = useState(false);
 
@@ -22,33 +30,88 @@ export default function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const items = [
+
+  const teamMembers = [
     {
-      image: "https://picsum.photos/300/300?grayscale",
-      link: "https://google.com/",
-      title: "Item 1",
-      description: "This is pretty cool, right?",
+      name: "Quinxie Doan",
+      role: "Event Lead",
+      link: "https://www.linkedin.com/in/quyendoan51/",
+      image: Quinxie,
     },
     {
-      image: "https://picsum.photos/400/400?grayscale",
-      link: "https://google.com/",
-      title: "Item 2",
-      description: "This is pretty cool, right?",
+      name: "Imane Mansouri",
+      role: "Event Vice Lead",
+      image: Imane,
+      link: "https://www.linkedin.com/in/imane-mansouri-418135335/",
+    },
+
+    {
+      name: "Minh (Robin) Nguyen",
+      role: "Sponsorship chair",
+      link: "https://www.linkedin.com/in/minhnbnguyen/",
+      image: Robin,
     },
     {
-      image: "https://picsum.photos/500/500?grayscale",
-      link: "https://google.com/",
-      title: "Item 3",
-      description: "This is pretty cool, right?",
+      name: "Hoan My Ha",
+      role: "Sponsorship chair",
+      link: "https://www.linkedin.com/in/hoan-my-ha/",
+      image: My,
     },
     {
+      name: "Diego Gomez",
+      role: "Logistic chair",
+      link: "https://www.linkedin.com/in/diego-gomez29/",
+      image: Diego,
+    },
+    {
+      name: "Zekarias Asaminew",
+      role: "Expertise Mentor",
+      link: "https://www.linkedin.com/in/zekarias-asaminew/",
       image: "https://picsum.photos/600/600?grayscale",
-      link: "https://google.com/",
-      title: "Item 4",
-      description: "This is pretty cool, right?",
+    },
+    {
+      name: "Hieu Nguyen",
+      role: "Expertise Member",
+      link: "https://www.linkedin.com/in/hieuthenguyen/",
+      image:Hieu
+    },
+    {
+      name: "Huy Nguyen",
+      role: "Expertise Member",
+      link: "https://www.linkedin.com/in/huy05/",
+      image: "https://picsum.photos/600/600?grayscale",
+    },
+    {
+      name: "Austin Dwomoh",
+      role: "Expertise Member",
+      link: "https://www.linkedin.com/in/austin-dwomoh/",
+      image: Austin,
+    },
+    {
+      name: "Mutawakil Rabiu",
+      role: "Design Chair",
+      link: "https://www.linkedin.com/in/mutawakil-rabiu-b412772b0/",
+      image: "https://picsum.photos/600/600?grayscale",
+    },
+    {
+      name: "Parker Morrissey",
+      role: "Logistic Member",
+      link: "https://www.linkedin.com/in/parker-morrissey/",
+      image: "https://picsum.photos/600/600?grayscale",
+    },
+    {
+      name: "Reda Oubih",
+      role: "Logistic Member",
+      link: "https://www.linkedin.com/in/reda-oubih-765b89369/",
+      image: Reda
+    },
+    {
+      name: "Ismael Otmani",
+      role: "Logistic Member",
+      link: "https://www.linkedin.com/in/ismael-otmani/",
+      image: "https://picsum.photos/600/600?grayscale",
     },
   ];
-
   return (
     <div className="app-root">
       <Navbar />

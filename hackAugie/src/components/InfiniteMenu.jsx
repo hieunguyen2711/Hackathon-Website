@@ -1076,14 +1076,7 @@ class InfiniteGridMenu {
   }
 }
 
-const defaultItems = [
-  {
-    image: "https://picsum.photos/900/900?grayscale",
-    link: "https://google.com/",
-    title: "",
-    description: "",
-  },
-];
+
 
 export default function InfiniteMenu({ items = [], scale = 1.0 }) {
   const canvasRef = useRef(null);
@@ -1102,7 +1095,7 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }) {
     if (canvas) {
       sketch = new InfiniteGridMenu(
         canvas,
-        items.length ? items : defaultItems,
+        items.length ? items : [{ title: "No items", description: "", image: "" }],
         handleActiveItem,
         setIsMoving,
         (sk) => sk.run(),
@@ -1140,12 +1133,12 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }) {
       {activeItem && (
         <>
           <h2 className={`face-title ${isMoving ? "inactive" : "active"}`}>
-            {activeItem.title}
+            {activeItem.role}
           </h2>
 
           <p className={`face-description ${isMoving ? "inactive" : "active"}`}>
             {" "}
-            {activeItem.description}
+            {activeItem.name}
           </p>
 
           <div
