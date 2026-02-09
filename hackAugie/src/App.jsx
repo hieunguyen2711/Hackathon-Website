@@ -30,7 +30,6 @@ export default function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-
   const teamMembers = [
     {
       name: "Quinxie Doan",
@@ -73,7 +72,7 @@ export default function App() {
       name: "Hieu Nguyen",
       role: "Expertise Member",
       link: "https://www.linkedin.com/in/hieuthenguyen/",
-      image:Hieu
+      image: Hieu,
     },
     {
       name: "Huy Nguyen",
@@ -103,7 +102,7 @@ export default function App() {
       name: "Reda Oubih",
       role: "Logistic Member",
       link: "https://www.linkedin.com/in/reda-oubih-765b89369/",
-      image: Reda
+      image: Reda,
     },
     {
       name: "Ismael Otmani",
@@ -134,12 +133,17 @@ export default function App() {
               <p className="section-subtitle">Coming soon</p>
             </div>
           </section>
-          <section className="team-section" id="team">
+          <section style={{marginTop:'30px'
+          }}>
             <div className="section-header">
               <h2 className="section-headline">The Crew</h2>
-              <p className="section-subtitle">The brave souls steering this ship.</p>
+              <p className="section-subtitle">
+                The brave souls steering this ship.
+              </p>
             </div>
-            <InfiniteMenu items={items} scale={1} />
+            <div className="team-section" id="team">
+              <InfiniteMenu items={teamMembers} scale={1} />
+            </div>
           </section>
         </div>
       </BackGround>

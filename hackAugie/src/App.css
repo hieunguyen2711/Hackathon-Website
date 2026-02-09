@@ -574,7 +574,6 @@ section {
   position: relative;
   padding-bottom: 12px;
 }
-  color: #00437c;
 .timeline-day h3::after {
   content: "";
   position: absolute;

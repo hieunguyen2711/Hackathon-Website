@@ -575,6 +575,7 @@ const LandscapeAnimation = () => {
         .overlay {
           position: absolute;
           inset: 0;
+          top: -40%;
           z-index: 50;
           display: flex;
           flex-direction: column;
@@ -767,6 +768,7 @@ const LandscapeAnimation = () => {
         <div className="hero-actions">
           <a className="hero-btn primary" href="#register">Register Now</a>
         </div>
+        <div className="hero-date">{timeLeft}</div>
         <div className="hero-date">April 18-19, 2026, Augustana College</div>
         <div className="scroll-indicator" aria-hidden="true"></div>
       </div>
